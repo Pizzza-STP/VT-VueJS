@@ -18,7 +18,7 @@ Vue.component('details-presentation', {
             <div class="main-details-row"> Taille moyenne : {{ cheval.taille }} </div>
             <div class="main-details-row"> Masse moyenne : {{ cheval.masse }} </div>
             <div class="main-details-row-description"> {{cheval.description}} </div>
-            <a class="main-details-wiki" v-bind:href=cheval.lien> page wikipédia </a>
+            <a class="main-details-wiki" v-bind:href=cheval.lien target="_blank"> page wikipédia </a>
         </div>
     `
 })
