@@ -78,6 +78,7 @@ main{
     color: #312615;
     /*border: #bfeb87 solid 5px;*/
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .main-tableau-ligne:hover{
@@ -105,6 +106,7 @@ main{
     background-color: #465532;
     color: #e0f5c6;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .main-details-retour span:hover{
@@ -130,6 +132,7 @@ main{
     background-color: #465532;
     color: #e0f5c6;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 footer{
