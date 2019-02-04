@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>VT - Présentation de vue.js</title>
+        <script src="libs/vue_2.5.22.js"></script>
+        <script src="scripts/templates.js"></script>
+        <link rel="stylesheet" href="css/general.css">
+    </head>
+    <body>
+            <header>
+                Liste de chevaux
+            </header>
+            <main id="app">
+                <div class="main-presentation" >
+                    <div v-html="textePresentation">
+                        {{ textePresentation }}
+                    </div>
+                </div>
+                <div class="main-tableau">
+                    <div class="main-tableau-inner" v-if="tableau">
+                        <tableau-presentation
+                            v-for="cheval in listeChevaux"
+                            v-bind:cheval="cheval"
+                            v-bind:key="cheval.id"
+                            v-on:click.native="selectHorse(cheval)"
+                        />
+                    </div>
+                    <div class="main-details" v-else>
+                        <div class="main-details-retour" > <span v-on:click="retourTableau"> Retour au tableau </span></div>
+                        <details-presentation v-bind:cheval="chevalSelect"></details-presentation>
+                    </div>
+                </div>
+            </main>
+            <footer>
+            </footer>
+    </body>
+    <script src="scripts/index_vue.js"></script>
+</html>
